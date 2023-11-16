@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise -1 Image Gallery using CSS-Grid</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 250px);
+      gap: 5px;
+      /* border: 2px solid black; */
+    }
+    .item_img {
+      padding: 5px;
+      width: 100%;
+      height: 100%;
+    }
+    .item_img img {
+      width: inherit;
+      height: inherit;
+    }
+
+    #one {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+    #two {
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+    #three {
+      grid-column: 3/4;
+      grid-row: 1/2;
+    }
+    #four {
+      grid-column: 1/2;
+      grid-row: 2/4;
+    }
+    #five {
+      grid-column: 2/3;
+      grid-row: 3/4;
+    }
+    #six {
+      grid-column: 3/4;
+      grid-row: 2/4;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="item_img" id="one"><img src="/img/books.jpg" alt="" /></div>
+      <div class="item_img" id="two"><img src="/img/bottle.jpg" alt="" /></div>
+      <div class="item_img" id="three"><img src="/img/herbs.jpg" alt="" /></div>
+      <div class="item_img" id="four">
+        <img src="/img/injection.jpg" alt="" />
+      </div>
+      <div class="item_img" id="five">
+        <img src="/img/plywood.jpg" alt="" />
+      </div>
+      <div class="item_img" id="six">
+        <img src="/img/herbs.jpg" alt="" />
+      </div>
+    </div>
+  </body>
+</html>

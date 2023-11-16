@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise-5</title>
+  </head>
+  <style>
+    .container {
+      display: grid;
+      width: 500px;
+      height: 300px;
+      border: 1px solid black;
+      grid-template-columns: repeat(2, 250px);
+      padding: 5px;
+      /* justify-items: end; */
+      justify-items: start;
+      /* justify-items: center; */
+    }
+    .box {
+      width: 200px;
+      border: 1px solid rgb(232, 167, 82);
+      height: 120px;
+      text-align: center;
+    }
+    .box:nth-child(1) {
+      background-color: red;
+    }
+    .box:nth-child(2) {
+      background-color: green;
+    }
+    .box:nth-child(3) {
+      background-color: yellow;
+    }
+    .box:nth-child(4) {
+      background-color: orange;
+      justify-self: end;
+    }
+  </style>
+  <body>
+    <p>
+      <b>
+        Justify-items: justify-items is a property applied on the grid
+        container. It aligns all the grid items within the grid container along
+        the inline (row) axis. It sets the default alignment for all the grid
+        items that do not have their individual alignment set using
+        justify-self.</b
+      >
+    </p>
+    <div class="container">
+      <div class="box">Red</div>
+      <div class="box">Green</div>
+      <div class="box">Yellow</div>
+      <div class="box">Orange</div>
+    </div>
+    <p>
+      <b>
+        Justify-self: justify-self is applied on individual grid items. It
+        aligns a particular grid item within its respective grid cell along the
+        inline (row) axis, overriding the alignment set by justify-items.</b
+      >
+    </p>
+  </body>
+</html>
